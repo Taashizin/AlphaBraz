@@ -1,10 +1,16 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #333;
 }
 
+body {
+  background: #f4f4f4;
+  color: #222;
+}
+
+/* HEADER PADRÃO */
 header {
   background: #111;
   color: white;
@@ -13,98 +19,85 @@ header {
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
+/* MENU */
 nav {
-  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
 }
 
 nav a:hover {
-  color: #f4b400;
+  color: gold;
 }
 
-.hero {
-  padding: 80px 20px;
-  text-align: center;
-  background: #ddd;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #f4b400;
-  color: black;
-  text-decoration: none;
-  margin-top: 10px;
-}
-
-.page {
-  padding: 40px;
-  text-align: center;
-}
-
-.galeria {
-  padding: 40px;
-  text-align: center;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  max-width: 600px;
+/* CONTAINER PADRÃO */
+.container {
+  max-width: 1000px;
   margin: auto;
+  padding: 40px 20px;
+  background: white;
 }
 
-.grid img {
+/* TITULOS */
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+/* GALERIA */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.galeria img {
   width: 100%;
   border-radius: 8px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-  margin: auto;
-}
-
+/* FORM */
 input, textarea {
+  width: 100%;
   margin: 5px 0;
   padding: 10px;
 }
 
 button {
-  padding: 10px;
-  background: #111;
+  padding: 10px 15px;
+  background: black;
   color: white;
   border: none;
   cursor: pointer;
 }
 
+/* WHATSAPP */
 .whatsapp {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 15px;
   background: #25D366;
   color: white;
-  text-decoration: none;
+  padding: 10px 15px;
   border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
 }
 
+/* FOOTER */
 footer {
+  text-align: center;
+  padding: 20px;
   background: #111;
   color: white;
-  text-align: center;
-  padding: 10px;
   margin-top: 40px;
 }
