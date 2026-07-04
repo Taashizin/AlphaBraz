@@ -2,7 +2,10 @@
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reformas AlphaBraz</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -16,26 +19,33 @@ body {
   overflow: hidden;
 }
 
-/* MENU */
+/* HEADER */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   background: #111;
-  padding: 15px;
+  color: white;
   text-align: center;
+  padding: 15px 10px;
   z-index: 1000;
 }
 
-header h1 {
-  color: white;
-  font-family: Georgia, serif;
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
   margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
   cursor: pointer;
   font-weight: bold;
@@ -45,40 +55,45 @@ nav a:hover {
   color: gold;
 }
 
-/* CONTAINER DAS SEÇÕES */
+/* SLIDER */
 .container {
   display: flex;
-  width: 500vw; /* 5 telas */
+  width: 500vw;
   height: 100vh;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.7s ease-in-out;
 }
 
-/* CADA TELA */
+/* SEÇÕES */
 section {
   width: 100vw;
   height: 100vh;
   padding-top: 120px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-/* CORES DIFERENTES */
-#inicio { background: #f2f2f2; }
-#servicos { background: #ddd; }
-#orcamento { background: #ccc; }
-#sobre { background: #bbb; }
-#contatos { background: #aaa; }
+/* CORES */
+#inicio { background: #f5f5f5; }
+#servicos { background: #e6e6e6; }
+#orcamento { background: #d9d9d9; }
+#sobre { background: #cccccc; }
+#contatos { background: #bfbfbf; }
 
-/* BOTÃO WHATSAPP */
-.whatsapp {
-  margin-top: 15px;
-  background: #25D366;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
+/* GALERIA */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.galeria img {
+  width: 120px;
+  height: 90px;
+  border-radius: 8px;
 }
 
 /* FORM */
@@ -86,23 +101,54 @@ input, textarea {
   margin: 5px;
   padding: 10px;
   width: 250px;
+  border: none;
+  border-radius: 5px;
 }
 
 button {
-  padding: 10px;
+  padding: 10px 15px;
   background: black;
   color: white;
   border: none;
   cursor: pointer;
+  margin-top: 5px;
 }
 
+/* WHATSAPP */
+.whatsapp {
+  margin-top: 15px;
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  body { overflow: auto; }
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    transform: none !important;
+  }
+
+  section {
+    width: 100%;
+    height: auto;
+    padding: 120px 20px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Reformas AlphaBraz</h1>
+  <div class="logo">Reformas AlphaBraz</div>
   <nav>
     <a onclick="goTo(0)">Início</a>
     <a onclick="goTo(1)">Serviços</a>
@@ -112,47 +158,68 @@ button {
   </nav>
 </header>
 
-<!-- SLIDES -->
 <div class="container" id="slider">
 
+  <!-- INÍCIO -->
   <section id="inicio">
-    <h2>Bem-vindo à AlphaBraz</h2>
-    <p>Especialistas em reformas e construção</p>
+    <h1>Bem-vindo à AlphaBraz</h1>
+    <p>Especialistas em reformas e construção de qualidade</p>
+
+    <div class="galeria">
+      <img src="https://via.placeholder.com/120" />
+      <img src="https://via.placeholder.com/120" />
+      <img src="https://via.placeholder.com/120" />
+      <img src="https://via.placeholder.com/120" />
+    </div>
   </section>
 
+  <!-- SERVIÇOS -->
   <section id="servicos">
-    <h2>Serviços</h2>
-    <p>Reformas, pintura, eletricidade, canalização</p>
+    <h1>Serviços</h1>
+    <p>✔ Reformas completas</p>
+    <p>✔ Pintura</p>
+    <p>✔ Eletricidade</p>
+    <p>✔ Canalização</p>
+    <p>✔ Acabamentos</p>
   </section>
 
+  <!-- ORÇAMENTO -->
   <section id="orcamento">
-    <h2>Orçamento</h2>
+    <h1>Orçamento</h1>
+
     <input type="text" placeholder="Nome">
     <input type="email" placeholder="Email">
-    <textarea placeholder="Projeto"></textarea>
-    <button>Enviar</button>
+    <textarea placeholder="Descreva seu projeto"></textarea>
+    <br>
+    <button>Enviar Pedido</button>
   </section>
 
+  <!-- SOBRE -->
   <section id="sobre">
-    <h2>Sobre Nós</h2>
-    <p>Empresa confiável com anos de experiência</p>
+    <h1>Sobre Nós</h1>
+    <p>Somos uma empresa séria com experiência em reformas residenciais e comerciais.</p>
   </section>
 
+  <!-- CONTATOS -->
   <section id="contatos">
-    <h2>Contatos</h2>
+    <h1>Contatos</h1>
     <p>Telefone: +34 600 000 000</p>
+    <p>Email: contato@alphabraz.com</p>
 
     <a class="whatsapp" href="https://wa.me/34600000000" target="_blank">
-      WhatsApp
+      Falar no WhatsApp
     </a>
   </section>
 
 </div>
 
 <script>
-let slider = document.getElementById("slider");
-
 function goTo(index) {
+  const slider = document.getElementById("slider");
+
+  // No mobile não faz slide
+  if (window.innerWidth <= 768) return;
+
   slider.style.transform = "translateX(-" + (index * 100) + "vw)";
 }
 </script>
