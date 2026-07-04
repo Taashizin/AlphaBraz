@@ -2,147 +2,8 @@
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reformas AlphaBraz</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  overflow: hidden;
-}
-
-/* HEADER */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 15px 10px;
-  z-index: 1000;
-}
-
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: gold;
-}
-
-/* SLIDER */
-.container {
-  display: flex;
-  width: 500vw;
-  height: 100vh;
-  transition: transform 0.7s ease-in-out;
-}
-
-/* SEÇÕES */
-section {
-  width: 100vw;
-  height: 100vh;
-  padding-top: 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-/* CORES */
-#inicio { background: #f5f5f5; }
-#servicos { background: #e6e6e6; }
-#orcamento { background: #d9d9d9; }
-#sobre { background: #cccccc; }
-#contatos { background: #bfbfbf; }
-
-/* GALERIA */
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(2, 120px);
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.galeria img {
-  width: 120px;
-  height: 90px;
-  border-radius: 8px;
-}
-
-/* FORM */
-input, textarea {
-  margin: 5px;
-  padding: 10px;
-  width: 250px;
-  border: none;
-  border-radius: 5px;
-}
-
-button {
-  padding: 10px 15px;
-  background: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-top: 5px;
-}
-
-/* WHATSAPP */
-.whatsapp {
-  margin-top: 15px;
-  display: inline-block;
-  background: #25D366;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  body { overflow: auto; }
-
-  .container {
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    transform: none !important;
-  }
-
-  section {
-    width: 100%;
-    height: auto;
-    padding: 120px 20px;
-  }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -150,79 +11,29 @@ button {
 <header>
   <div class="logo">Reformas AlphaBraz</div>
   <nav>
-    <a onclick="goTo(0)">Início</a>
-    <a onclick="goTo(1)">Serviços</a>
-    <a onclick="goTo(2)">Orçamento</a>
-    <a onclick="goTo(3)">Sobre</a>
-    <a onclick="goTo(4)">Contatos</a>
+    <a href="index.html">Início</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="orcamento.html">Orçamento</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contatos.html">Contatos</a>
   </nav>
 </header>
 
-<div class="container" id="slider">
+<div class="container">
+  <h1>Bem-vindo</h1>
+  <p>Especialistas em reformas, pintura e construção.</p>
 
-  <!-- INÍCIO -->
-  <section id="inicio">
-    <h1>Bem-vindo à AlphaBraz</h1>
-    <p>Especialistas em reformas e construção de qualidade</p>
-
-    <div class="galeria">
-      <img src="https://via.placeholder.com/120" />
-      <img src="https://via.placeholder.com/120" />
-      <img src="https://via.placeholder.com/120" />
-      <img src="https://via.placeholder.com/120" />
-    </div>
-  </section>
-
-  <!-- SERVIÇOS -->
-  <section id="servicos">
-    <h1>Serviços</h1>
-    <p>✔ Reformas completas</p>
-    <p>✔ Pintura</p>
-    <p>✔ Eletricidade</p>
-    <p>✔ Canalização</p>
-    <p>✔ Acabamentos</p>
-  </section>
-
-  <!-- ORÇAMENTO -->
-  <section id="orcamento">
-    <h1>Orçamento</h1>
-
-    <input type="text" placeholder="Nome">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Descreva seu projeto"></textarea>
-    <br>
-    <button>Enviar Pedido</button>
-  </section>
-
-  <!-- SOBRE -->
-  <section id="sobre">
-    <h1>Sobre Nós</h1>
-    <p>Somos uma empresa séria com experiência em reformas residenciais e comerciais.</p>
-  </section>
-
-  <!-- CONTATOS -->
-  <section id="contatos">
-    <h1>Contatos</h1>
-    <p>Telefone: +34 600 000 000</p>
-    <p>Email: contato@alphabraz.com</p>
-
-    <a class="whatsapp" href="https://wa.me/34600000000" target="_blank">
-      Falar no WhatsApp
-    </a>
-  </section>
-
+  <div class="galeria">
+    <img src="https://via.placeholder.com/200">
+    <img src="https://via.placeholder.com/200">
+    <img src="https://via.placeholder.com/200">
+    <img src="https://via.placeholder.com/200">
+  </div>
 </div>
 
-<script>
-function goTo(index) {
-  const slider = document.getElementById("slider");
-
-  // No mobile não faz slide
-  if (window.innerWidth <= 768) return;
-
-  slider.style.transform = "translateX(-" + (index * 100) + "vw)";
-}
-</script>
+<footer>
+  © 2026 Reformas AlphaBraz
+</footer>
 
 </body>
 </html>
