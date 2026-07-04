@@ -1,22 +1,13 @@
-.logo {
-    font-size: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-/* controla tamanho dos ícones */
-.logo span,
 nav a {
-    font-size: 18px;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
 }
 
-/* se estiveres a usar emojis grandes no hero */
-.hero h1 {
-    font-size: 36px;
-}
-
-.hero p {
-    font-size: 18px;
+nav a:hover {
+    background: #ffb300;
+    color: black;
+    transform: none;   /* impede o “andar” */
 }
