@@ -1,3 +1,32 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
+
+/* HEADER */
+header {
+    background: #0a0a0a;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    color: #ffb300;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* MENU */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #1c1c1c;
+    flex-wrap: wrap;
+}
+
 nav a {
     color: white;
     padding: 15px 20px;
@@ -9,5 +38,74 @@ nav a {
 nav a:hover {
     background: #ffb300;
     color: black;
-    transform: none;   /* impede o “andar” */
+    border-radius: 5px;
+    transform: none; /* evita o "andar pra frente" */
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #111, #222);
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #ffb300;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #ffb300;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* GALERIA */
+.gallery {
+    text-align: center;
+    padding: 40px;
+}
+
+.gallery h2 {
+    color: #ffb300;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.grid img:hover {
+    transform: scale(1.05);
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
 }
