@@ -220,14 +220,10 @@ button:hover{
 }
 
 .whatsapp-button img{
-
-    width: 42px;
-    height: 42px;
-
-    border-radius: 50%;
-
-    object-fit: cover;
-
+    width:40px;
+    height:auto;
+    border-radius:0;
+    object-fit:contain;
 }
 
 .whatsapp-button span{
