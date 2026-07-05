@@ -1,231 +1,98 @@
 /* ==========================
-   RESET
+   FORMULÁRIO
 ========================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f4f4;
-    color:#222;
-}
-
-/* ==========================
-   MENU
-========================== */
-
-nav{
-    position:fixed;
-    top:0;
-    left:0;
+form{
     width:100%;
-    height:90px;
+    max-width:650px;
 
-    background:rgba(0,0,0,.90);
+    margin:35px auto 0;
 
     display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:35px;
-
-    z-index:1000;
+    flex-direction:column;
+    gap:18px;
 }
 
-/* LOGO */
+form input,
+form textarea{
 
-.logo-nav{
-    position:absolute;
-    left:40px;
-
-    color:#fff;
-    font-family:Georgia, serif;
-    font-size:42px;
-    font-weight:normal;
-}
-
-/* LINKS */
-
-nav a{
-    color:#fff;
-    text-decoration:none;
-    font-size:18px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#d4af37;
-}
-
-/* ==========================
-   BANNER
-========================== */
-
-header{
     width:100%;
-    height:100vh;
 
-    background-image:
-        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-        url("img/obra.jpg");
+    padding:15px;
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-}
+    font-size:16px;
 
-/* ==========================
-   CONTAINER
-========================== */
+    font-family:Arial, Helvetica, sans-serif;
 
-.container{
-    width:90%;
-    max-width:1100px;
-
-    margin:60px auto;
-
-    background:#fff;
-
-    padding:50px;
-
-    border-radius:10px;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.container h1{
-    margin-bottom:15px;
-    font-size:36px;
-}
-
-.container p{
-    margin-bottom:30px;
-    font-size:18px;
-    line-height:1.7;
-}
-
-/* ==========================
-   GALERIA
-========================== */
-
-.galeria{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:15px;
-}
-
-.galeria img{
-    width:100%;
-    height:220px;
-
-    object-fit:cover;
+    border:2px solid #ddd;
 
     border-radius:8px;
 
+    background:#fff;
+
+    outline:none;
+
     transition:.3s;
 }
 
-.galeria img:hover{
-    transform:scale(1.05);
+form input:focus,
+form textarea:focus{
+
+    border-color:#d4af37;
+
+    box-shadow:0 0 10px rgba(212,175,55,.35);
 }
 
-/* ==========================
-   BOTÕES
-========================== */
+form textarea{
 
-button{
+    min-height:180px;
+
+    resize:vertical;
+}
+
+form button{
+
+    width:230px;
+
+    margin:15px auto 0;
+
+    padding:15px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
     background:#111;
+
     color:#fff;
 
     border:none;
 
-    padding:12px 25px;
+    border-radius:8px;
 
     cursor:pointer;
-
-    border-radius:5px;
 
     transition:.3s;
 }
 
-button:hover{
-    background:#333;
+form button:hover{
+
+    background:#d4af37;
+
+    color:#111;
+
+    transform:translateY(-3px);
 }
-
-/* ==========================
-   RODAPÉ
-========================== */
-
-footer{
-    background:#111;
-    color:#fff;
-
-    text-align:center;
-
-    padding:20px;
-
-    margin-top:40px;
-}
-
-/* ==========================
-   RESPONSIVO
-========================== */
 
 @media(max-width:768px){
 
-    nav{
-        flex-wrap:wrap;
-        justify-content:center;
+    form{
 
-        gap:15px;
-
-        height:auto;
-
-        padding:15px;
+        max-width:100%;
     }
 
-    .logo-nav{
-        position:static;
+    form button{
 
         width:100%;
-
-        text-align:center;
-
-        font-size:30px;
-
-        margin-bottom:10px;
-    }
-
-    nav a{
-        font-size:16px;
-    }
-
-    header{
-        height:80vh;
-    }
-
-    .container{
-        width:95%;
-        padding:25px;
-    }
-
-    .container h1{
-        font-size:28px;
-    }
-
-    .galeria{
-        grid-template-columns:1fr;
-    }
-
-    .galeria img{
-        height:200px;
     }
 }
