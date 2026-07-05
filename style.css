@@ -15,7 +15,7 @@ html{
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#f4f4f4;
-    color:#ccc;
+    color:#222;
 }
 
 /* ==========================
@@ -275,7 +275,7 @@ button:hover{
 
 footer{
 
-    background:#222;
+    background:#ccc;
 
     color:#fff;
 
