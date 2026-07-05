@@ -604,6 +604,15 @@ footer{
         height:220px;
 
     }
+   .orcamento-grid{
+
+    grid-template-columns:1fr;
+
+    }
+
+.orcamento-info{
+
+    margin-top:40px;
 
 }
 
@@ -630,15 +639,4 @@ footer{
 .whatsapp-btn img {
     width: 42px;
     height: 42px;
-}
-
-.orcamento-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.orcamento-info{
-
-    margin-top:40px;
 }
