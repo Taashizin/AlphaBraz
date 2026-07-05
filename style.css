@@ -125,10 +125,9 @@ header{
 
 .header-orcamento{
 
-    height:45vh;
+    height:320px;
 
-    min-height:330px;
-
+    margin-top:90px;
 }
 
 .banner-content{
