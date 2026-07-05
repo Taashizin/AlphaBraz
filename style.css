@@ -123,6 +123,14 @@ header{
     background-repeat:no-repeat;
 }
 
+.header-orcamento{
+
+    height:45vh;
+
+    min-height:330px;
+
+}
+
 .banner-content{
     color:#fff;
     max-width:800px;
