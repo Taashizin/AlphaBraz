@@ -195,6 +195,15 @@ header{
 
 }
 
+.container ul{
+    margin-left:20px;
+    line-height:2;
+}
+
+.container li{
+    margin-bottom:10px;
+}
+
 .container p{
 
     margin-bottom:30px;
