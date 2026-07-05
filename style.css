@@ -45,10 +45,24 @@ nav{
     position:absolute;
     left:40px;
 
+    display:flex;
+    align-items:center;
+    gap:12px;
+
     color:#fff;
     font-family:Georgia, serif;
     font-size:42px;
     font-weight:normal;
+}
+
+.logo-nav img{
+    width:50px;
+    height:50px;
+    object-fit:contain;
+}
+
+.logo-nav span{
+    line-height:1;
 }
 
 /* LINKS */
@@ -184,24 +198,22 @@ footer{
     nav{
         flex-wrap:wrap;
         justify-content:center;
-
         gap:15px;
-
         height:auto;
-
         padding:15px;
     }
 
     .logo-nav{
         position:static;
-
         width:100%;
-
-        text-align:center;
-
+        justify-content:center;
         font-size:30px;
-
         margin-bottom:10px;
+    }
+
+    .logo-nav img{
+        width:40px;
+        height:40px;
     }
 
     nav a{
