@@ -29,12 +29,13 @@ nav{
     width:100%;
     height:90px;
 
-    background:rgba(0,0,0,.90);
+    background:rgba(0,0,0,.92);
 
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
-    gap:35px;
+
+    padding:0 50px;
 
     z-index:1000;
 }
@@ -42,32 +43,31 @@ nav{
 /* LOGO */
 
 .logo-nav{
-    position:absolute;
-    left:40px;
-
     display:flex;
     align-items:center;
     gap:12px;
-
-    color:#fff;
-    font-family:Georgia, serif;
-    font-size:42px;
-    font-weight:normal;
 }
 
 .logo-nav img{
-    width:50px;
-    height:50px;
+    width:42px;
+    height:42px;
     object-fit:contain;
 }
 
 .logo-nav span{
-    line-height:1;
+    color:#fff;
+    font-family:Georgia, serif;
+    font-size:42px;
 }
 
-/* LINKS */
+/* MENU */
 
-nav a{
+.menu-links{
+    display:flex;
+    gap:35px;
+}
+
+.menu-links a{
     color:#fff;
     text-decoration:none;
     font-size:18px;
@@ -75,7 +75,7 @@ nav a{
     transition:.3s;
 }
 
-nav a:hover{
+.menu-links a:hover{
     color:#d4af37;
 }
 
@@ -139,11 +139,8 @@ header{
 .galeria img{
     width:100%;
     height:220px;
-
     object-fit:cover;
-
     border-radius:8px;
-
     transition:.3s;
 }
 
@@ -158,15 +155,10 @@ header{
 button{
     background:#111;
     color:#fff;
-
     border:none;
-
     padding:12px 25px;
-
     cursor:pointer;
-
     border-radius:5px;
-
     transition:.3s;
 }
 
@@ -181,11 +173,8 @@ button:hover{
 footer{
     background:#111;
     color:#fff;
-
     text-align:center;
-
     padding:20px;
-
     margin-top:40px;
 }
 
@@ -196,27 +185,31 @@ footer{
 @media(max-width:768px){
 
     nav{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
+        flex-direction:column;
         height:auto;
-        padding:15px;
+        padding:20px;
     }
 
     .logo-nav{
-        position:static;
-        width:100%;
-        justify-content:center;
-        font-size:30px;
-        margin-bottom:10px;
+        margin-bottom:20px;
     }
 
     .logo-nav img{
-        width:40px;
-        height:40px;
+        width:36px;
+        height:36px;
     }
 
-    nav a{
+    .logo-nav span{
+        font-size:30px;
+    }
+
+    .menu-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+    }
+
+    .menu-links a{
         font-size:16px;
     }
 
